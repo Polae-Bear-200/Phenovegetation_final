@@ -40,7 +40,7 @@ def main(img_dir_path, str_time, end_tim, filtrs, mask_name):
     # Apply time filter logic
     for file_name in image_dir:
         try:
-            datetime_str = os.path.basename(file_name)[4:-11]  # Remove the first 4 characters and '.JPG'
+            datetime_str = os.path.basename(file_name)[4:14]  # Remove the first 4 characters and '.JPG'
             file_time = datetime.strptime(datetime_str, "%Y_%m_%d")
     
     # Compare the extracted file time with the start and end time
